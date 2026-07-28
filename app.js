@@ -492,6 +492,20 @@
     });
   }
 
+  // Month view's day cells are too small to be useful on phone-width
+  // screens, so default to List there; desktop/tablet still default to Month.
+  var MOBILE_BREAKPOINT = "(max-width: 640px)";
+
+  function applyInitialView() {
+    var isMobile = window.matchMedia(MOBILE_BREAKPOINT).matches;
+    activeView = isMobile ? "list" : "month";
+    document.getElementById("calendarList").hidden = activeView !== "list";
+    document.getElementById("monthView").hidden = activeView !== "month";
+    document.querySelectorAll(".view-toggle-btn").forEach(function (btn) {
+      btn.classList.toggle("is-active", btn.dataset.view === activeView);
+    });
+  }
+
   // ---------- Event detail modal ----------
 
   function openEventModal(ev) {
@@ -615,6 +629,7 @@
     renderMonth(eventsByDate);
     setupMonthNav(eventsByDate);
     setupFilters();
+    applyInitialView();
     setupViewToggle();
     setupModal();
     setupDropdownBehavior();
