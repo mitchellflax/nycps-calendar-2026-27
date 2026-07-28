@@ -71,13 +71,21 @@ After hosting, the "Add Full Calendar to…" dropdown's Google/Apple/Outlook
 options will work automatically — they build their links from the page's own
 URL.
 
-## Adding AdSense (or another ad network)
+## Ads (currently paused)
 
-There's a placeholder slot at the bottom of the page, in `index.html`, inside
-`<section class="ad-slot">`. Replace the HTML comment there with your ad unit
-snippet (e.g. your AdSense `<ins class="adsbygoogle">` code + script tag). The
-surrounding box (`.ad-slot-inner` in `styles.css`) is already sized and styled
-to hold a responsive ad unit — remove the dashed border once real ads are in place if you'd like.
+Ads are turned off for now. All the AdSense wiring is still in `index.html`,
+just commented out, so it's a quick re-enable rather than starting over:
+
+1. Uncomment the AdSense account script in `<head>`.
+2. Uncomment the `<section class="ad-slot">` block (near the bottom of
+   `<main>`) — it has a placeholder box ready for either Auto ads or a manual
+   ad unit snippet; see the comment inside it for both options.
+3. Recreate `ads.txt` at the project root with:
+   `google.com, pub-1194193202054148, DIRECT, f08c47fec0942fa0`
+   (Google requires this file present to actually authorize ad serving.)
+
+The styling for the ad box (`.ad-slot`, `.ad-slot-inner` in `styles.css`) is
+untouched and ready to go once the HTML is uncommented.
 
 ## Source
 
