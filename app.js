@@ -80,6 +80,16 @@
   // and Yahoo's quick-add URLs use an *inclusive* end date (the actual last
   // day) — mixing these up silently drops the last day of multi-day events.
 
+  // On-page descriptions (list rows, the modal) stay short — the source note
+  // and footer already explain where the data comes from. Anything that
+  // leaves the page (a calendar export) loses that context, so exports get
+  // this line appended to their description instead.
+  var SOURCE_ATTRIBUTION = "From the 2026–2027 NYC Public Schools calendar: https://schools.nyc.gov/calendar";
+
+  function exportDescription(ev) {
+    return ev.description.replace(/\s+$/, "") + " " + SOURCE_ATTRIBUTION;
+  }
+
   function googleEventUrl(ev) {
     var start = parseISODate(ev.start);
     var endExclusive = addDays(parseISODate(ev.end), 1);
@@ -87,7 +97,7 @@
       action: "TEMPLATE",
       text: ev.title,
       dates: fmtYMD(start) + "/" + fmtYMD(endExclusive),
-      details: ev.description
+      details: exportDescription(ev)
     });
     return "https://calendar.google.com/calendar/render?" + params.toString();
   }
@@ -99,7 +109,7 @@
       startdt: ev.start,
       enddt: ev.end,
       subject: ev.title,
-      body: ev.description,
+      body: exportDescription(ev),
       allday: "true"
     });
     return "https://outlook.live.com/calendar/deeplink/compose?" + params.toString();
@@ -112,7 +122,7 @@
       st: ev.start.replace(/-/g, ""),
       et: ev.end.replace(/-/g, ""),
       dur: "allday",
-      desc: ev.description
+      desc: exportDescription(ev)
     });
     return "https://calendar.yahoo.com/?" + params.toString();
   }
@@ -152,7 +162,7 @@
       "DTSTART;VALUE=DATE:" + fmtYMD(start),
       "DTEND;VALUE=DATE:" + fmtYMD(endExclusive),
       foldIcsLine("SUMMARY:" + icsEscapeText(ev.title)),
-      foldIcsLine("DESCRIPTION:" + icsEscapeText(ev.description)),
+      foldIcsLine("DESCRIPTION:" + icsEscapeText(exportDescription(ev))),
       "TRANSP:TRANSPARENT",
       "END:VEVENT",
       "END:VCALENDAR"
@@ -361,6 +371,16 @@
       if (months[i].year === cursor.year && months[i].month === cursor.month) return i;
     }
     return -1;
+  }
+
+  // Opens on the current month if it falls within the school year (so a
+  // parent checking back in March lands on March, not September) — falls
+  // back to the first month of the school year otherwise.
+  function defaultMonthCursor() {
+    var months = schoolYearMonths();
+    var today = new Date();
+    var cursor = { year: today.getFullYear(), month: today.getMonth() };
+    return monthIndexOf(cursor, months) >= 0 ? cursor : months[0];
   }
 
   function renderMonth(eventsByDate) {
@@ -632,7 +652,7 @@
     });
     var eventsByDate = buildEventsByDate(events);
 
-    monthCursor = { year: 2026, month: 8 }; // September 2026
+    monthCursor = defaultMonthCursor();
 
     renderEvents(events);
     renderMonth(eventsByDate);

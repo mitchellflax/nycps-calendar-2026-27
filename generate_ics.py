@@ -39,17 +39,24 @@ lines = [
 
 now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%dT%H%M%SZ")
 
+# events.json holds the clean, on-page description. Exported calendar events
+# (this .ics file, and the quick-add links built in app.js) get an attribution
+# line appended, since they leave the page and lose the surrounding source
+# note / footer context that explains where the data comes from.
+SOURCE_ATTRIBUTION = "From the 2026–2027 NYC Public Schools calendar: https://schools.nyc.gov/calendar"
+
 for ev in events:
     start = datetime.date.fromisoformat(ev["start"])
     end_exclusive = datetime.date.fromisoformat(ev["end"]) + datetime.timedelta(days=1)
     uid = f"{ev['id']}@nycps-calendar-2026-27"
+    export_description = ev["description"].rstrip() + " " + SOURCE_ATTRIBUTION
     lines.append("BEGIN:VEVENT")
     lines.append(fold(f"UID:{uid}"))
     lines.append(f"DTSTAMP:{now}")
     lines.append(f"DTSTART;VALUE=DATE:{start.strftime('%Y%m%d')}")
     lines.append(f"DTEND;VALUE=DATE:{end_exclusive.strftime('%Y%m%d')}")
     lines.append(fold(f"SUMMARY:{escape(ev['title'])}"))
-    lines.append(fold(f"DESCRIPTION:{escape(ev['description'])}"))
+    lines.append(fold(f"DESCRIPTION:{escape(export_description)}"))
     lines.append("TRANSP:TRANSPARENT")
     lines.append("END:VEVENT")
 

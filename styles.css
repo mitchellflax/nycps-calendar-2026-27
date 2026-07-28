@@ -8,17 +8,19 @@
   --accent-hover: #143fa8;
   --radius: 12px;
 
-  --closed: #dc2626;
+  /* Tag text colors are tuned to hit >=4.5:1 contrast (WCAG AA) against
+     their own -bg color, both here and in the dark-mode block below. */
+  --closed: #d22222;
   --closed-bg: #fdecec;
-  --half-day: #d97706;
+  --half-day: #a55a05;
   --half-day-bg: #fdf1de;
-  --ptc: #2563eb;
+  --ptc: #2362eb;
   --ptc-bg: #eaf1fd;
   --remote: #7c3aed;
   --remote-bg: #f2ecfc;
-  --special: #0d9488;
+  --special: #0b7a70;
   --special-bg: #e4f5f3;
-  --milestone: #16a34a;
+  --milestone: #117e39;
   --milestone-bg: #e8f7ec;
 }
 
@@ -30,11 +32,17 @@
     --text-muted: #a3a3a6;
     --border: #2c2c2e;
 
+    --closed: #e66262;
     --closed-bg: #3a1c1c;
+    --half-day: #e37c06;
     --half-day-bg: #3a2c14;
+    --ptc: #5888f0;
     --ptc-bg: #17233d;
+    --remote: #9f6ff2;
     --remote-bg: #271b3d;
+    --special: #0fa799;
     --special-bg: #113230;
+    --milestone: #17ad4e;
     --milestone-bg: #123420;
   }
 }
@@ -190,6 +198,26 @@ a {
   flex-wrap: wrap;
   gap: 8px;
   margin: 0;
+}
+
+/* On phone-width screens, a single scrollable row reads cleaner than pills
+   wrapping across three lines and pushing the calendar further down. */
+@media (max-width: 600px) {
+  .legend {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    margin: 0 -20px;
+    padding: 0 20px 4px;
+  }
+
+  .legend::-webkit-scrollbar {
+    display: none;
+  }
+
+  .legend-item {
+    flex: none;
+  }
 }
 
 .legend-item {
@@ -459,7 +487,18 @@ a {
 /* Month view */
 
 .month-view {
-  margin-bottom: 40px;
+  max-width: 760px;
+  margin: 0 auto 40px;
+  padding: 0 20px;
+}
+
+/* On roomier screens the month grid can use real width instead of sitting in
+   the same narrow text column as the prose — cells stay cramped and titles
+   over-truncate otherwise. */
+@media (min-width: 900px) {
+  .month-view {
+    max-width: 1100px;
+  }
 }
 
 .month-nav {
@@ -640,6 +679,8 @@ a {
   padding: 28px 24px 24px;
   max-width: 420px;
   width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
