@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NYCPS School Year Calendar 2026–27</title>
+<meta name="description" content="A clean, readable calendar of NYC Public Schools key dates for the 2026–27 school year, with one-click add to Google, Apple, Outlook, and Yahoo calendars.">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:,">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <p class="eyebrow">NYC Public Schools</p>
+    <h1>2026–27 School Year Calendar</h1>
+    <p class="subtitle">Every closing, half day, conference night, and key date — in one readable page.</p>
+
+    <div class="cta-row">
+      <a id="downloadIcs" class="btn btn-primary" href="calendar.ics" download="nycps-calendar-2026-27.ics">
+        <span class="btn-icon">&#8595;</span> Download Calendar (.ics)
+      </a>
+      <details class="cal-dropdown cta-dropdown">
+        <summary class="btn btn-secondary">
+          <span class="btn-icon">+</span> Add Full Calendar to&hellip;
+        </summary>
+        <div id="subscribeMenu" class="cal-menu cal-menu-wide">
+          <!-- populated by app.js -->
+        </div>
+      </details>
+    </div>
+    <p class="cta-hint" id="ctaHint">
+      Works with Google Calendar, Apple Calendar, Outlook, and Yahoo. The one-click subscribe options need this site hosted at a public URL — see below for individual event buttons that work right now.
+    </p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="toolbar">
+    <div class="view-toggle" role="group" aria-label="Calendar view">
+      <button class="view-toggle-btn" data-view="list">List</button>
+      <button class="view-toggle-btn is-active" data-view="month">Month</button>
+    </div>
+
+    <section class="legend" aria-label="Event type legend">
+      <button class="legend-item is-active" data-filter="all">
+        <span class="dot dot-all"></span> All events
+      </button>
+      <button class="legend-item" data-filter="closed">
+        <span class="dot dot-closed"></span> School closed
+      </button>
+      <button class="legend-item" data-filter="half-day">
+        <span class="dot dot-half-day"></span> Early dismissal
+      </button>
+      <button class="legend-item" data-filter="ptc">
+        <span class="dot dot-ptc"></span> Parent-Teacher conferences
+      </button>
+      <button class="legend-item" data-filter="remote">
+        <span class="dot dot-remote"></span> Remote learning
+      </button>
+      <button class="legend-item" data-filter="special">
+        <span class="dot dot-special"></span> Special schedule
+      </button>
+      <button class="legend-item" data-filter="milestone">
+        <span class="dot dot-milestone"></span> Key date
+      </button>
+    </section>
+  </div>
+
+  <section id="calendarList" class="calendar-list" aria-label="Calendar events" hidden>
+    <!-- populated by app.js -->
+  </section>
+
+  <section id="monthView" class="month-view" aria-label="Month calendar view">
+    <div class="month-nav">
+      <button id="prevMonth" class="month-nav-btn" aria-label="Previous month">&#8249;</button>
+      <h2 id="monthLabel" class="month-label">September 2026</h2>
+      <button id="nextMonth" class="month-nav-btn" aria-label="Next month">&#8250;</button>
+    </div>
+    <div class="month-weekdays">
+      <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+    </div>
+    <div id="monthGrid" class="month-grid">
+      <!-- populated by app.js -->
+    </div>
+  </section>
+
+  <section class="source-note">
+    <p>
+      Source: NYC Public Schools official 2026–27 school year calendar
+      (<a href="https://schools.nyc.gov/calendar" target="_blank" rel="noopener">schools.nyc.gov/calendar</a>).
+      Individual schools' Parent-Teacher Conference dates may differ — confirm with your child's school.
+      On days when buildings are closed for weather or other emergencies, NYCPS may hold classes remotely.
+    </p>
+  </section>
+
+  <section class="ad-slot" aria-label="Advertisement">
+    <div class="ad-slot-inner">
+      <!--
+        AdSense placeholder.
+        Replace this comment block with your ad unit code, e.g.:
+
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      -->
+      <span class="ad-slot-label">Ad space</span>
+    </div>
+  </section>
+
+</main>
+
+<div id="eventModal" class="modal-overlay" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button id="modalClose" class="modal-close" aria-label="Close">&#215;</button>
+    <span id="modalTag" class="event-tag"></span>
+    <h3 id="modalTitle" class="modal-title"></h3>
+    <p id="modalDate" class="modal-date"></p>
+    <p id="modalDesc" class="modal-desc"></p>
+    <div id="modalAddOptions" class="modal-add-options">
+      <!-- populated by app.js -->
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Not an official NYC Public Schools website. Always confirm dates at <a href="https://schools.nyc.gov/calendar" target="_blank" rel="noopener">schools.nyc.gov/calendar</a>.</p>
+  </div>
+</footer>
+
+<script src="events-data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

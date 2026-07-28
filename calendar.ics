@@ -1,0 +1,399 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NYCPS Calendar 2026-27//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:NYCPS School Year Calendar 2026–27
+X-WR-TIMEZONE:America/New_York
+BEGIN:VEVENT
+UID:first-day@nycps-calendar-2026-27
+DTSTAMP:20260728T145232Z
+DTSTART;VALUE=DATE:20260910
+DTEND;VALUE=DATE:20260911
+SUMMARY:First Day of School
+DESCRIPTION:First day of school for the 2026–27 school year. From the 2026–
+ 2027 NYC Public Schools calendar: https://schools.nyc.gov/calendar
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:yom-kippur@nycps-calendar-2026-27
+DTSTAMP:20260728T145232Z
+DTSTART;VALUE=DATE:20260921
+DTEND;VALUE=DATE:20260922
+SUMMARY:Yom Kippur — Schools Closed
+DESCRIPTION:Schools closed for Yom Kippur. From the 2026–2027 NYC Public Sc
+ hools calendar: https://schools.nyc.gov/calendar
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ptc-eve-middle-1@nycps-calendar-2026-27
+DTSTAMP:20260728T145232Z
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260924
+SUMMARY:Evening Parent-Teacher Conferences (Middle & D75 Schools)
+DESCRIPTION:Evening Parent-Teacher Conferences for middle schools and D75 s
+ chools. From the 2026–2027 NYC Public Schools calendar: https://schools.ny
+ c.gov/calendar
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ptc-eve-high-1@nycps-calendar-2026-27
+DTSTAMP:20260728T145232Z
+DTSTART;VALUE=DATE:20260924
+DTEND;VALUE=DATE:20260925
+SUMMARY:Evening Parent-Teacher Conferences (High\, K–12 & 6–12 Schools)
+DESCRIPTION:Evening Parent-Teacher Conferences for high schools\, K–12 scho
+ ols\, and 6–12 schools. From the 2026–2027 NYC Public Schools calendar: ht
+ tps://schools.nyc.gov/calendar
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ptc-eve-elem-1@nycps-calendar-2026-27
+DTSTAMP:20260728T145232Z
+DTSTART;VALUE=DATE:20260930
+DTEND;VALUE=DATE:20261001
+SUMMARY:Evening Parent-Teacher Conferences (Elementary & Pre-K)
+DESCRIPTION:Evening Parent-Teacher Conferences for elementary schools and P
+ re-K Centers. From the 2026–2027 NYC Public Schools calendar: https://scho
+ ols.nyc.gov/calendar
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:italian-indigenous-day@nycps-calendar-2026-27
+DTSTAMP:20260728T145232Z
+DTSTART;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261013
+SUMMARY:Italian Heritage / Indigenous Peoples' Day — Schools Closed
+DESCRIPTION:Schools closed for Italian Heritage/Indigenous Peoples' Day. Fr
+ om the 2026–2027 NYC Public Schools calendar: https://schools.nyc.gov/cale
+ ndar
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:election-day@nycps-calendar-2026-27
+DTSTAMP:20260728T145232Z
+DTSTART;VALUE=DATE:20261103
+DTEND;VALUE=DATE:20261104
+SUMMARY:Election Day — Remote Learning
+DESCRIPTION:School will be in session remotely for all students. From the 2
+ 026–2027 NYC Public Schools calendar: https://schools.nyc.gov/calendar
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ptc-half-elem-1@nycps-calendar-2026-27
+DTSTAMP:20260728T145232Z
+DTSTART;VALUE=DATE:20261105
+DTEND;VALUE=DATE:20261106
+SUMMARY:Parent-Teacher Conferences (Elementary & Pre-K) — 3 Hrs Early Dismi
+ ssal
+DESCRIPTION:Afternoon and Evening Parent-Teacher Conferences for elementary
+  schools and Pre-K Centers\; students in these schools dismissed three hou
+ rs early. From the 2026–2027 NYC Public Schools calendar: https://schools.
+ nyc.gov/calendar
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:veterans-day@nycps-calendar-2026-27
+DTSTAMP:20260728T145232Z
+DTSTART;VALUE=DATE:20261111
+DTEND;VALUE=DATE:20261112
+SUMMARY:Veterans Day — Schools Closed
+DESCRIPTION:Schools closed for Veterans Day. From the 2026–2027 NYC Public 
+ Schools calendar: https://schools.nyc.gov/calendar
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ptc-half-middle-1@nycps-calendar-2026-27
+DTSTAMP:20260728T145232Z
+DTSTART;VALUE=DATE:20261112
+DTEND;VALUE=DATE:20261113
+SUMMARY:Parent-Teacher Conferences (Middle & D75) — 3 Hrs Early Dismissal
+DESCRIPTION:Afternoon and Evening Parent-Teacher Conferences for middle sch
+ ools and D75\; students in these schools dismissed three hours early. From
+  the 2026–2027 NYC Public Schools calendar: https://schools.nyc.gov/calend
+ ar
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ptc-eve-high-2@nycps-calendar-2026-27
+DTSTAMP:20260728T145232Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261120
+SUMMARY:Evening Parent-Teacher Conferences (High\, K–12 & 6–12 Schools)
+DESCRIPTION:Evening Parent-Teacher Conferences for high schools\, K–12\, an
+ d 6–12 schools. From the 2026–2027 NYC Public Schools calendar: https://sc
+ hools.nyc.gov/calendar
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ptc-half-high-1@nycps-calendar-2026-27
+DTSTAMP:20260728T145232Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20261121
+SUMMARY:Parent-Teacher Conferences (High\, K–12 & 6–12) — 3 Hrs Early Dismi
+ ssal
+DESCRIPTION:Afternoon Parent-Teacher Conferences for high schools\, K–12\, 
+ and 6–12 schools\; students in these schools dismissed three hours early. 
+ From the 2026–2027 NYC Public Schools calendar: https://schools.nyc.gov/ca
+ lendar
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:thanksgiving-recess@nycps-calendar-2026-27
+DTSTAMP:20260728T145232Z
+DTSTART;VALUE=DATE:20261126
+DTEND;VALUE=DATE:20261128
+SUMMARY:Thanksgiving Recess — Schools Closed
+DESCRIPTION:Thanksgiving Recess\, schools closed. From the 2026–2027 NYC Pu
+ blic Schools calendar: https://schools.nyc.gov/calendar
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:winter-recess@nycps-calendar-2026-27
+DTSTAMP:20260728T145232Z
+DTSTART;VALUE=DATE:20261224
+DTEND;VALUE=DATE:20270102
+SUMMARY:Winter Recess — Schools Closed
+DESCRIPTION:Winter Recess\, schools closed. From the 2026–2027 NYC Public S
+ chools calendar: https://schools.nyc.gov/calendar
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:mlk-day@nycps-calendar-2026-27
+DTSTAMP:20260728T145232Z
+DTSTART;VALUE=DATE:20270118
+DTEND;VALUE=DATE:20270119
+SUMMARY:Rev. Dr. Martin Luther King Jr. Day — Schools Closed
+DESCRIPTION:Schools closed for Rev. Dr. Martin Luther King Jr. Day. From th
+ e 2026–2027 NYC Public Schools calendar: https://schools.nyc.gov/calendar
+ 
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:regents-jan@nycps-calendar-2026-27
+DTSTAMP:20260728T145232Z
+DTSTART;VALUE=DATE:20270126
+DTEND;VALUE=DATE:20270130
+SUMMARY:Regents Administration
+DESCRIPTION:Regents Administration period. From the 2026–2027 NYC Public Sc
+ hools calendar: https://schools.nyc.gov/calendar
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:pd-day@nycps-calendar-2026-27
+DTSTAMP:20260728T145232Z
+DTSTART;VALUE=DATE:20270201
+DTEND;VALUE=DATE:20270202
+SUMMARY:Professional Development Day (Partial)
+DESCRIPTION:Professional Development Day\; students who attend high schools
+  and schools that serve only grades 6–12 are not in attendance. All other 
+ students attend school. From the 2026–2027 NYC Public Schools calendar: ht
+ tps://schools.nyc.gov/calendar
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:spring-semester@nycps-calendar-2026-27
+DTSTAMP:20260728T145232Z
+DTSTART;VALUE=DATE:20270202
+DTEND;VALUE=DATE:20270203
+SUMMARY:Spring Semester Begins
+DESCRIPTION:Spring Semester begins. From the 2026–2027 NYC Public Schools c
+ alendar: https://schools.nyc.gov/calendar
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:midwinter-recess@nycps-calendar-2026-27
+DTSTAMP:20260728T145232Z
+DTSTART;VALUE=DATE:20270215
+DTEND;VALUE=DATE:20270220
+SUMMARY:Midwinter Recess — Schools Closed
+DESCRIPTION:Midwinter Recess\, schools closed. From the 2026–2027 NYC Publi
+ c Schools calendar: https://schools.nyc.gov/calendar
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ptc-half-elem-2@nycps-calendar-2026-27
+DTSTAMP:20260728T145232Z
+DTSTART;VALUE=DATE:20270303
+DTEND;VALUE=DATE:20270304
+SUMMARY:Parent-Teacher Conferences (Elementary & Pre-K) — 3 Hrs Early Dismi
+ ssal
+DESCRIPTION:Afternoon and Evening Parent-Teacher Conferences for elementary
+  schools and Pre-K Centers\; students in these schools dismissed three hou
+ rs early. From the 2026–2027 NYC Public Schools calendar: https://schools.
+ nyc.gov/calendar
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ptc-half-middle-2@nycps-calendar-2026-27
+DTSTAMP:20260728T145232Z
+DTSTART;VALUE=DATE:20270304
+DTEND;VALUE=DATE:20270305
+SUMMARY:Parent-Teacher Conferences (Middle & D75) — 3 Hrs Early Dismissal
+DESCRIPTION:Afternoon and Evening Parent-Teacher Conferences for middle sch
+ ools and D75 schools\; students in these schools dismissed three hours ear
+ ly. From the 2026–2027 NYC Public Schools calendar: https://schools.nyc.go
+ v/calendar
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:eid-al-fitr@nycps-calendar-2026-27
+DTSTAMP:20260728T145232Z
+DTSTART;VALUE=DATE:20270309
+DTEND;VALUE=DATE:20270310
+SUMMARY:Eid al-Fitr — Schools Closed
+DESCRIPTION:Schools closed for Eid al-Fitr. From the 2026–2027 NYC Public S
+ chools calendar: https://schools.nyc.gov/calendar
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ptc-eve-high-3@nycps-calendar-2026-27
+DTSTAMP:20260728T145232Z
+DTSTART;VALUE=DATE:20270318
+DTEND;VALUE=DATE:20270319
+SUMMARY:Evening Parent-Teacher Conferences (High\, K–12 & 6–12 Schools)
+DESCRIPTION:Evening Parent-Teacher Conferences for high schools\, K–12\, an
+ d 6–12 schools. From the 2026–2027 NYC Public Schools calendar: https://sc
+ hools.nyc.gov/calendar
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ptc-half-high-2@nycps-calendar-2026-27
+DTSTAMP:20260728T145232Z
+DTSTART;VALUE=DATE:20270319
+DTEND;VALUE=DATE:20270320
+SUMMARY:Parent-Teacher Conferences (High\, K–12 & 6–12) — 3 Hrs Early Dismi
+ ssal
+DESCRIPTION:Afternoon Parent-Teacher Conferences for high schools\, K–12\, 
+ and 6–12 schools\; students in these schools are dismissed three hours ear
+ ly. From the 2026–2027 NYC Public Schools calendar: https://schools.nyc.go
+ v/calendar
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:good-friday@nycps-calendar-2026-27
+DTSTAMP:20260728T145232Z
+DTSTART;VALUE=DATE:20270326
+DTEND;VALUE=DATE:20270327
+SUMMARY:Good Friday — Schools Closed
+DESCRIPTION:Schools closed for Good Friday. From the 2026–2027 NYC Public S
+ chools calendar: https://schools.nyc.gov/calendar
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:spring-recess@nycps-calendar-2026-27
+DTSTAMP:20260728T145232Z
+DTSTART;VALUE=DATE:20270422
+DTEND;VALUE=DATE:20270501
+SUMMARY:Spring Recess — Schools Closed
+DESCRIPTION:Spring Recess\, schools closed. From the 2026–2027 NYC Public S
+ chools calendar: https://schools.nyc.gov/calendar
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ptc-eve-high-4@nycps-calendar-2026-27
+DTSTAMP:20260728T145232Z
+DTSTART;VALUE=DATE:20270512
+DTEND;VALUE=DATE:20270513
+SUMMARY:Evening Parent-Teacher Conferences (High\, K–12 & 6–12 Schools)
+DESCRIPTION:Evening Parent-Teacher Conferences for high schools\, K–12\, an
+ d 6–12 schools. From the 2026–2027 NYC Public Schools calendar: https://sc
+ hools.nyc.gov/calendar
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ptc-eve-middle-2@nycps-calendar-2026-27
+DTSTAMP:20260728T145232Z
+DTSTART;VALUE=DATE:20270513
+DTEND;VALUE=DATE:20270514
+SUMMARY:Evening Parent-Teacher Conferences (Middle & D75 Schools)
+DESCRIPTION:Evening Parent-Teacher Conferences for middle schools and D75 s
+ chools. From the 2026–2027 NYC Public Schools calendar: https://schools.ny
+ c.gov/calendar
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:eid-al-adha@nycps-calendar-2026-27
+DTSTAMP:20260728T145232Z
+DTSTART;VALUE=DATE:20270517
+DTEND;VALUE=DATE:20270518
+SUMMARY:Eid al-Adha — Schools Closed
+DESCRIPTION:Schools closed for Eid al-Adha. From the 2026–2027 NYC Public S
+ chools calendar: https://schools.nyc.gov/calendar
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ptc-eve-elem-2@nycps-calendar-2026-27
+DTSTAMP:20260728T145232Z
+DTSTART;VALUE=DATE:20270526
+DTEND;VALUE=DATE:20270527
+SUMMARY:Evening Parent-Teacher Conferences (Elementary & Pre-K)
+DESCRIPTION:Evening Parent-Teacher Conferences for elementary schools and P
+ re-K Centers. From the 2026–2027 NYC Public Schools calendar: https://scho
+ ols.nyc.gov/calendar
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:memorial-day@nycps-calendar-2026-27
+DTSTAMP:20260728T145232Z
+DTSTART;VALUE=DATE:20270531
+DTEND;VALUE=DATE:20270601
+SUMMARY:Memorial Day — Schools Closed
+DESCRIPTION:Schools closed for Memorial Day. From the 2026–2027 NYC Public 
+ Schools calendar: https://schools.nyc.gov/calendar
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:clerical-day@nycps-calendar-2026-27
+DTSTAMP:20260728T145232Z
+DTSTART;VALUE=DATE:20270608
+DTEND;VALUE=DATE:20270609
+SUMMARY:Clerical Day — No Classes (Most Students)
+DESCRIPTION:Clerical Day\; no classes for students attending 3-K\, Pre-K\, 
+ elementary schools\, middle schools\, K–12 schools\, and standalone D75 pr
+ ograms. From the 2026–2027 NYC Public Schools calendar: https://schools.ny
+ c.gov/calendar
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:anniversary-day@nycps-calendar-2026-27
+DTSTAMP:20260728T145232Z
+DTSTART;VALUE=DATE:20270610
+DTEND;VALUE=DATE:20270611
+SUMMARY:Anniversary Day / Chancellor's Conference Day — No Classes
+DESCRIPTION:Anniversary Day/Chancellor's Conference Day for staff developme
+ nt\; students do not attend school. From the 2026–2027 NYC Public Schools 
+ calendar: https://schools.nyc.gov/calendar
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:regents-june-1@nycps-calendar-2026-27
+DTSTAMP:20260728T145232Z
+DTSTART;VALUE=DATE:20270615
+DTEND;VALUE=DATE:20270619
+SUMMARY:Regents Administration
+DESCRIPTION:Regents Administration period. From the 2026–2027 NYC Public Sc
+ hools calendar: https://schools.nyc.gov/calendar
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:regents-june-2@nycps-calendar-2026-27
+DTSTAMP:20260728T145232Z
+DTSTART;VALUE=DATE:20270621
+DTEND;VALUE=DATE:20270626
+SUMMARY:Regents Administration
+DESCRIPTION:Regents Administration period. From the 2026–2027 NYC Public Sc
+ hools calendar: https://schools.nyc.gov/calendar
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:last-day@nycps-calendar-2026-27
+DTSTAMP:20260728T145232Z
+DTSTART;VALUE=DATE:20270628
+DTEND;VALUE=DATE:20270629
+SUMMARY:Last Day of School
+DESCRIPTION:Last day of school for students. From the 2026–2027 NYC Public 
+ Schools calendar: https://schools.nyc.gov/calendar
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR
