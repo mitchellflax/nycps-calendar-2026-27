@@ -458,15 +458,6 @@ a {
   color: var(--text-muted);
 }
 
-/* Source note */
-
-.source-note {
-  font-size: 13px;
-  color: var(--text-muted);
-  border-top: 1px solid var(--border);
-  padding: 20px 0;
-}
-
 /* Ad slot */
 
 .ad-slot {
@@ -487,6 +478,11 @@ a {
 /* Month view */
 
 .month-view {
+  /* Weekend columns run narrower than weekdays — almost everything on this
+     calendar falls Mon–Fri, so weekday columns get the extra room instead
+     of seven equal columns. Multi-day recess events still span correctly;
+     they just render in a narrower cell on Sat/Sun. */
+  --month-col-widths: 0.6fr repeat(5, 1fr) 0.6fr;
   max-width: 760px;
   margin: 0 auto 40px;
   padding: 0 20px;
@@ -494,10 +490,12 @@ a {
 
 /* On roomier screens the month grid can use real width instead of sitting in
    the same narrow text column as the prose — cells stay cramped and titles
-   over-truncate otherwise. */
+   over-truncate otherwise. Still leaves a real side gutter rather than
+   running edge-to-edge with the window. */
 @media (min-width: 900px) {
   .month-view {
-    max-width: 1100px;
+    max-width: 1000px;
+    padding: 0 32px;
   }
 }
 
@@ -546,7 +544,7 @@ a {
 
 .month-weekdays {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: var(--month-col-widths);
   gap: 1px;
   font-size: 11px;
   font-weight: 700;
@@ -559,7 +557,7 @@ a {
 
 .month-grid {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: var(--month-col-widths);
   gap: 1px;
   background: var(--border);
   border: 1px solid var(--border);
@@ -763,8 +761,16 @@ a {
 .site-footer {
   border-top: 1px solid var(--border);
   padding: 20px 0 40px;
-  font-size: 12.5px;
+  font-size: 13px;
   color: var(--text-muted);
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.site-footer p + p {
+  margin-top: 12px;
 }
 
 @media (max-width: 520px) {
