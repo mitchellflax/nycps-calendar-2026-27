@@ -496,12 +496,10 @@
 
   // Month view's day cells are too small to be useful on phone-width
   // screens, so default to List there; desktop/tablet still default to Month.
-  // A change listener (not just a one-time check) matters here: some mobile
-  // browsers don't report the final viewport width until just after the
-  // first synchronous script runs, so a single check at load can grab a
-  // stale (pre-settle) value. The listener self-corrects when that happens,
-  // without needing a reload — but backs off permanently once the visitor
-  // has picked a view themselves.
+  // Using a matchMedia change listener (not just a one-time check at load)
+  // also means resizing the browser window across the breakpoint updates the
+  // default live — but it backs off permanently once the visitor has picked
+  // a view themselves.
   var MOBILE_BREAKPOINT = "(max-width: 640px)";
   var userChangedView = false;
 
