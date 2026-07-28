@@ -474,36 +474,47 @@
     });
   }
 
+  function setView(view) {
+    activeView = view;
+    document.getElementById("calendarList").hidden = activeView !== "list";
+    document.getElementById("monthView").hidden = activeView !== "month";
+    document.querySelectorAll(".view-toggle-btn").forEach(function (btn) {
+      btn.classList.toggle("is-active", btn.dataset.view === activeView);
+    });
+  }
+
   function setupViewToggle() {
     var buttons = document.querySelectorAll(".view-toggle-btn");
-    var listSection = document.getElementById("calendarList");
-    var monthSection = document.getElementById("monthView");
-
     buttons.forEach(function (btn) {
       btn.addEventListener("click", function () {
         closeAllDropdowns();
-        buttons.forEach(function (b) { b.classList.remove("is-active"); });
-        btn.classList.add("is-active");
-        activeView = btn.dataset.view;
-        var isMonth = activeView === "month";
-        listSection.hidden = isMonth;
-        monthSection.hidden = !isMonth;
+        userChangedView = true;
+        setView(btn.dataset.view);
       });
     });
   }
 
   // Month view's day cells are too small to be useful on phone-width
   // screens, so default to List there; desktop/tablet still default to Month.
+  // A change listener (not just a one-time check) matters here: some mobile
+  // browsers don't report the final viewport width until just after the
+  // first synchronous script runs, so a single check at load can grab a
+  // stale (pre-settle) value. The listener self-corrects when that happens,
+  // without needing a reload — but backs off permanently once the visitor
+  // has picked a view themselves.
   var MOBILE_BREAKPOINT = "(max-width: 640px)";
+  var userChangedView = false;
 
-  function applyInitialView() {
-    var isMobile = window.matchMedia(MOBILE_BREAKPOINT).matches;
-    activeView = isMobile ? "list" : "month";
-    document.getElementById("calendarList").hidden = activeView !== "list";
-    document.getElementById("monthView").hidden = activeView !== "month";
-    document.querySelectorAll(".view-toggle-btn").forEach(function (btn) {
-      btn.classList.toggle("is-active", btn.dataset.view === activeView);
-    });
+  function setupResponsiveView() {
+    var mq = window.matchMedia(MOBILE_BREAKPOINT);
+    function applyFromMediaQuery(matches) {
+      if (userChangedView) return;
+      setView(matches ? "list" : "month");
+    }
+    applyFromMediaQuery(mq.matches);
+    var listener = function (e) { applyFromMediaQuery(e.matches); };
+    if (mq.addEventListener) mq.addEventListener("change", listener);
+    else if (mq.addListener) mq.addListener(listener); // older Safari
   }
 
   // ---------- Event detail modal ----------
@@ -629,7 +640,7 @@
     renderMonth(eventsByDate);
     setupMonthNav(eventsByDate);
     setupFilters();
-    applyInitialView();
+    setupResponsiveView();
     setupViewToggle();
     setupModal();
     setupDropdownBehavior();
