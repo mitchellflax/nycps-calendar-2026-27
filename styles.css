@@ -68,6 +68,16 @@ body {
   padding: 0 20px;
 }
 
+/* Keep the header, toolbar, and list view aligned with the month grid's
+   wider column on roomier screens, so buttons stay left-justified under a
+   container edge that matches the calendar instead of a narrower one. */
+@media (min-width: 900px) {
+  .wrap {
+    max-width: 1000px;
+    padding: 0 32px;
+  }
+}
+
 a {
   color: var(--accent);
 }
