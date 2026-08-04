@@ -173,7 +173,8 @@ a {
   flex-wrap: wrap;
   align-items: center;
   gap: 16px;
-  margin: 32px 0 20px;
+  margin-top: 32px;
+  margin-bottom: 20px;
 }
 
 .view-toggle {
